@@ -7,8 +7,8 @@
     <title>Assignment_11</title>
     <link rel="stylesheet" href="assets/bootstrap-5.3.1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/customer.css">
-    <link rel="stylesheet" href="assets/css/item.css">
+<!--    <link rel="stylesheet" href="assets/css/customer.css">-->
+<!--    <link rel="stylesheet" href="assets/css/item.css">-->
     <link rel="stylesheet" href="assets/css/order.css">
     <link rel="stylesheet" href="assets/css/orderTable.css">
     <link rel="stylesheet" href="assets/css/normalize.css">
@@ -71,24 +71,14 @@
 
 <main class="customerManage" id="customerManage">
     <!-- customer section -->
-    <section>
-        <div id="customer_headline" class="text-center m-3">
-            <h1>Customer Manage</h1>
-        </div>
-
-        <div id="image">
-            <img src="assets/image/icons8-customer-100.png" class="img-thumbnail" alt="...">
-        </div>
-
-        <div id="searchDiv">
-            <form class="d-flex" role="search">
-                <input id="searchCustomer" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+    <div class="container" id="customer">
+        <div class="row">
+            <div class="text-center m-3">
+                <h1>Customer Manage</h1>
+            </div>
         </div>
         <div class="row">
-            <div id="form" class="col col-lg-6 col-md-12 col-sm-12 col-12">
-
+            <div class="col col-lg-6 col-md-12 col-sm-12 col-12">
                 <form>
                     <div class="mb-3">
                         <label for="customerId" class="form-label">Customer Id</label>
@@ -99,65 +89,50 @@
                         <input type="text" class="form-control" id="customerName">
                     </div>
                     <div class="mb-3">
-                        <label for="customerAddress" class="form-label">Customer Address</label>
+                        <label for="customerAddress" class="form-label">Customer Name</label>
                         <input type="text" class="form-control" id="customerAddress">
                     </div>
                     <div class="mb-3">
                         <label for="contactNo" class="form-label">Contact NO</label>
                         <input type="tel" class="form-control" id="contactNo">
                     </div>
-
-                    <div id="button">
-                        <div class="mt-3">
-                            <button type="button" class="btn btn-success">Submit</button>
-                            <button type="button" class="btn btn-primary">Update</button>
-                            <button type="button" class="btn btn-danger">Delete</button>
-                        </div>
+                    <div class="mt-3" id="customer_btn">
+                        <button type="button" class="btn btn-success">Submit</button>
+                        <button type="button" class="btn btn-primary">Update</button>
+                        <button type="button" class="btn btn-danger">Delete</button>
+                        <button type="reset" class="btn btn-warning">Reset</button>
                     </div>
                 </form>
             </div>
-        </div>
-        <hr>
-    </section>
 
-    <section>
-        <div >
-            <h1 id="viewCustomers" >View Customers</h1>
+            <div class="col col-lg-6 col-md-12 col-sm-12 col-12">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">ContactNo</th>
+                    </tr>
+                    </thead>
+                    <tbody id="customer-tbl-body"></tbody>
+                </table>
+            </div>
         </div>
-        <table class="table" id="table">
-            <thead id="table_head" class="table-light">
-            <tr>
-                <th scope="col">Id</th>
-                <th scope="col">Name</th>
-                <th scope="col">Address</th>
-                <th scope="col">Contact NO</th>
-            </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
-    </section>
+    </div>
+
 </main>
 
 <main class="itemManage" id="itemManage">
-    <!-- customer section -->
-    <section>
-        <div id="item_headline" class="text-center m-3">
-            <h1>Item Manage</h1>
-        </div>
-
-        <div id="image1">
-            <img src="assets/image/icons8-item-100.png" class="img-thumbnail" alt="...">
-        </div>
-
-        <div id="searchDiv1">
-            <form class="d-flex" role="search">
-                <input id="searchItem" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+    <!-- item section -->
+    <div class="container" id="item">
+        <div class="row">
+            <div class="text-center m-3">
+                <h1>Item Manage</h1>
+            </div>
         </div>
         <div class="row">
-            <div id="form1" class="col col-lg-6 col-md-12 col-sm-12 col-12">
-
+            <div class="col col-lg-6 col-md-12 col-sm-12 col-12">
                 <form>
                     <div class="mb-3">
                         <label for="itemId" class="form-label">Item Code</label>
@@ -169,43 +144,36 @@
                     </div>
                     <div class="mb-3">
                         <label for="itemPrice" class="form-label">Item Price</label>
-                        <input type="text" class="form-control" id="itemPrice">
+                        <input type="number" class="form-control" id="itemPrice">
                     </div>
                     <div class="mb-3">
-                        <label for="itemQty" class="form-label">Item Quantity</label>
+                        <label for="itemQty" class="form-label">Item Qty</label>
                         <input type="number" class="form-control" id="itemQty">
                     </div>
-
-                    <div id="button1">
-                        <div class="mt-3">
-                            <button type="button" class="btn btn-success">Submit</button>
-                            <button type="button" class="btn btn-primary">Update</button>
-                            <button type="button" class="btn btn-danger">Delete</button>
-                        </div>
+                    <div class="mt-3" id="item_btn">
+                        <button type="button" class="btn btn-success">Submit</button>
+                        <button type="button" class="btn btn-primary">Update</button>
+                        <button type="button" class="btn btn-danger">Delete</button>
+                        <button type="reset" class="btn btn-warning">Reset</button>
                     </div>
                 </form>
             </div>
-        </div>
-        <hr>
-    </section>
 
-    <section>
-        <div >
-            <h1 id="viewItems" >View Items</h1>
+            <div class="col col-lg-6 col-md-12 col-sm-12 col-12">
+                <table class="table" id="table1">
+                    <thead>
+                    <tr>
+                        <th scope="col">Code</th>
+                        <th scope="col">Description</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Qty</th>
+                    </tr>
+                    </thead>
+                    <tbody id="item-tbl-body"></tbody>
+                </table>
+            </div>
         </div>
-        <table class="table" id="table1">
-            <thead id="table_head1" class="table-light">
-            <tr>
-                <th scope="col">Code</th>
-                <th scope="col">Description</th>
-                <th scope="col">Price</th>
-                <th scope="col">Quantity</th>
-            </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
-    </section>
-
+    </div>
 </main>
 
 <main class="orderManage" id="orderManage">
