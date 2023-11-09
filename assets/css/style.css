@@ -2,7 +2,6 @@
 
 body{
     overflow-x: hidden;
-    overflow-y: hidden;
 }
 
 main > section{
@@ -101,4 +100,12 @@ main > section{
 
 @media all and (max-width: 991px){
 
+}
+
+
+
+/* order */
+#orderManage{
+    position: relative;
+    top: 5rem;
 }
