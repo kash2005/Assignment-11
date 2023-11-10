@@ -109,3 +109,9 @@ main > section{
     position: relative;
     top: 5rem;
 }
+
+#form{
+    position: relative;
+    top: -15rem;
+    width: 80rem;
+}

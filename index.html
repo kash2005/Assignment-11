@@ -43,10 +43,10 @@
             <img id="logo" src="assets/image/Screenshot%202023-09-01%20195705.png" alt="">
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div id="navbar-nav" class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    <a class="nav-link active" aria-current="page" href="#">Customer</a>
-                    <a class="nav-link active" aria-current="page" href="#">Item</a>
-                    <a class="nav-link active" aria-current="page" href="#">Order</a>
+                    <a class="nav-link active" aria-current="page" href="#" id="home_page">Home</a>
+                    <a class="nav-link active" aria-current="page" href="#" id="customer_page">Customer</a>
+                    <a class="nav-link active" aria-current="page" href="#" id="item_page">Item</a>
+                    <a class="nav-link active" aria-current="page" href="#" id="order_page">Order</a>
 
                 </div>
             </div>
@@ -226,8 +226,8 @@
                     <div class="mt-1 mb-3" id="button">
                         <button id="submitBtn2" type="submit" class="btn btn-success">Purchase</button>
                         <button id="updateBtn2" type="button" class="btn btn-primary">Update</button>
-                        <button type="button" class="btn btn-danger">Delete</button>
-                        <button type="reset" class="btn btn-warning">Reset</button>
+                        <button id="deleteBtn2" type="button" class="btn btn-danger">Delete</button>
+                        <button id="resetBtn2" type="reset" class="btn btn-warning">Reset</button>
                     </div>
                 </div>
             </div>
@@ -285,34 +285,30 @@
 
 <main id="orderDetails" class="orderDetailsPage">
     <section>
-        <div id="orders_headline" class="text-center m-3">
-            <h1>Order Details Manage</h1>
-        </div>
+        <div id="form">
+            <div class="text-center gradient-text">
+                <h3>Order Details Form</h3>
+            </div>
 
-        <div id="searchDiv3">
-            <form class="d-flex" role="search">
-                <input id="searchOrders" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+            <div class="col table1">
+                <table class="table" id="item-details-table">
+                    <thead class="table-primary">
+                    <tr>
+                        <th scope="col">Order Id</th>
+                        <th scope="col">Order Date</th>
+                        <th scope="col">Customer Id</th>
+                        <th scope="col">Total</th>
+                        <th scope="col">Discount</th>
+                        <th scope="col">Sub Total</th>
+                        <th scope="col">Cash</th>
+                        <th scope="col">Balance</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
         </div>
-        <div>
-            <h1 id="viewOrders1" >View Orders</h1>
-        </div>
-        <table class="table1" id="table3">
-            <thead id="table_head3" class="table-light">
-            <tr>
-                <th scope="col">Order Id</th>
-                <th scope="col">Order Date</th>
-                <th scope="col">Item Id</th>
-                <th scope="col">Customer Id</th>
-                <th scope="col">Qty</th>
-                <th scope="col">Price</th>
-                <th scope="col">Discount</th>
-                <th scope="col">Sub Total</th>
-            </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
     </section>
 </main>
 
