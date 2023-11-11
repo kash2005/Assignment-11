@@ -67,6 +67,6 @@ function calculateBalance(cash, total, discount) {
     return balance.toFixed(2); // Assuming you want two decimal places
 }
 
-$('#order_details_page').on('click', function() {
+$('#orderDetailsBtn').on('click', function() {
     populateTableOrderDetails();
 });
